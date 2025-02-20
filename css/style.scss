@@ -14,7 +14,188 @@ a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+span {display: block;}
 /*--------------------*/
 $font-family: "Open Sans", sans-serif;
 $second-family: "Tenor Sans", sans-serif;
 $third-family: "Montserrat", sans-serif;
+@mixin stylefontz($ff, $fw, $fs, $c){
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fs;
+    color: $c;
+}
+@mixin stylcenter($d, $ai, $jc){
+    display: $d;
+    align-items: $ai;
+    justify-content: $jc;
+}
+// @include stylefontz($second-family, 700, 70px, $colorgrey);
+// @include stylcenter(flex, center, space-between);
+body {
+    position: relative;
+    background: #f3efea;
+}
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.text {
+    @include stylefontz($font-family, 300, 16px, #323232);
+    line-height: 1.5;
+}
+.title {
+    @include stylefontz($font-family, 400, 48px, #57463a);
+}
+.btn {
+    padding: 18px 58px;
+    @include stylefontz($font-family, 400, 16px, #f6f6f6);
+    background: #a1b29f;
+}
+.header {
+    padding: 30px 0 20px;
+    border-bottom: 1px solid #000;
+    &__content {
+        @include stylcenter(flex, center, space-between);
+    }
+    &__content-menu {
+        @include stylcenter(flex, center, space-between);
+        width: 30%;
+    }
+    &__list-link {
+        @include stylefontz($font-family, 400, 16px, #323232);
+        line-height: 1.5;
+        transition: all 0.3s ease-in;
+        &::after {
+            content: '';
+            display: block;
+            width: 0%;
+            height: 2px;
+            background: #a1b29f;
+            transition: all 0.3s ease-in;
+        }
+        &:hover {
+            color: #a1b29f;
+            &::after {
+                width: 80%;
+            }
+        }
+    }
+    &__mobil {
+        display: none;
+
+    }
+    &__mobil-body {
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        position: absolute;
+        overflow: hidden;
+        z-index: 0;
+    }
+    &__body-burger {
+        margin-left: auto;
+        width: 68px;
+        height: 12px;
+        @include stylcenter(flex, center, space-between);
+        flex-direction: column;
+        position: relative;
+        z-index: 10;
+        span {
+            width: 100%;
+            height: 2px;
+            background: #57463a;
+            transition: all 0.3s ease-in;
+        }
+        &.active {
+            span {
+                background: #f3efea;
+            }
+        }
+    }
+    &__body-menu {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        background: #57463a;
+        transform: translateX(180%);
+        transition: all 0.3s ease-in;
+        &.active {
+            transform: translateX(0%);
+        }
+    }
+    &__menu {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        @include stylcenter(flex, center, center);
+        flex-direction: column;
+        gap: 30px;
+        .header__content-menu {
+            flex-direction: column;
+            gap: 30px;
+            width: 100%;
+        }
+    }
+}
+.main {
+	&__content {
+        @include stylcenter(flex, center, space-between);
+	}
+	&__content-bg {
+        width: 719px;
+        height: 774px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+	}
+	&__content-info {
+        @include stylcenter(flex, start, space-between);
+        flex-direction: column;
+        width: 50%;
+        margin-right: auto;
+        height: 478px;
+        padding: 0 40px;
+	}
+	&__info-social {
+        width: 170px;
+        margin-left: auto;
+        @include stylcenter(flex, center, space-between);
+	}
+	&__social-link {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        @include stylcenter(flex, center, center);
+        border: 1px solid #715b4b;
+	}
+}
+@media (max-width: 915px) {
+    .header {
+        &__content {
+            display: none;
+        } 
+        &__mobil {
+            display: block;
+        }
+    }
+    .main {
+        margin-top: 70px;
+        &__content {
+            flex-direction: column-reverse;
+            gap: 40px;
+        }
+        &__content-bg {
+            width: 100%;
+            height: 50%;
+        }
+        &__content-info {
+            width: 100%;
+        }
+    }
+}
