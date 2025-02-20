@@ -248,25 +248,29 @@ body {
   border: 1px solid #715b4b;
 }
 
+@media (max-width: 1024px) {
+  .title {
+    font-size: 35px;
+  }
+  .main {
+    margin-top: 70px;
+  }
+  .main__content {
+    gap: 40px;
+  }
+  .main__content-bg {
+    width: 50%;
+    height: 50%;
+  }
+  .main__content-info {
+    width: 50%;
+  }
+}
 @media (max-width: 915px) {
   .header__content {
     display: none;
   }
   .header__mobil {
     display: block;
-  }
-  .main {
-    margin-top: 70px;
-  }
-  .main__content {
-    flex-direction: column-reverse;
-    gap: 40px;
-  }
-  .main__content-bg {
-    width: 100%;
-    height: 50%;
-  }
-  .main__content-info {
-    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
