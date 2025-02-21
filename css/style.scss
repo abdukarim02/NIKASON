@@ -225,6 +225,146 @@ body {
         @include stylefontz($font-family, 300, 18px,  #323232);
     }
 }
+.about {
+    &__info {
+        margin-top: 100px;
+        @include stylcenter(flex, center, space-between);
+    }
+    &__info-bg {
+        width: 50%;
+        height: 475px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__info-info {
+        width: 50%;
+        padding: 0 40px;
+    }
+    &__info-title {
+        width: 100%;
+        margin-bottom: 40px;
+        @include stylefontz($font-family, 400, 24px,  #000);
+        line-height: 1.5;
+    }
+    &__info-text {
+        width: 100%;
+        margin-bottom: 70px;
+        line-height: 1.5;
+    }
+}
+.video {
+    margin: 160px 0 200px;
+    &__content-title {
+        margin-bottom: 100px;
+    }
+    &__content-bg {
+        width: 100%;
+        height: 80vh;
+        @include stylcenter(flex, center, center);
+        background: #c4c4c4;
+    }
+    &__bg-btn {
+        width: 44px;
+        height: 44px;
+        cursor: pointer;
+        svg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.services {
+    &__content-title {
+        margin-bottom: 100px;
+    }
+    &__flex {
+        @include stylcenter(flex, center, space-between);
+        background: #d4cdc3;
+    }
+    &__flex-bg {
+        width: 50%;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__flex-info {
+        width: 50%;
+        margin-right: auto;
+        padding: 0 40px;
+    }
+    &__info-title {
+        margin-bottom: 40px;
+        @include stylefontz($font-family, 400, 24px,  #000);
+    }
+    &__info-text {
+        width: 100%;
+        margin-bottom: 75px;
+    }
+}
+.guarantee {
+    margin: 200px 0 210px;
+    &__content {
+        padding: 14px 12px 13px 13px;
+        border: 7px solid #a1b29f;
+    }
+    &__content-info {
+        padding: 90px 95px;
+        border: 1px solid #715b4b;
+    }
+    &__content-title {
+        width: 100%;
+        margin: 0 auto;
+        line-height: 1.5;
+        text-align: center;
+    }
+    &__content-text {
+        width: 100%;
+        margin-top: 40px;
+    }
+    &__content-bg {
+        width: 152px;
+        height: 150px;
+        margin-left: auto;
+    }
+}
+.footer {
+    padding-top: 85px;
+    height: 380px;
+    background: #715b4b;
+    &__content {
+        @include stylcenter(flex, center, space-between);
+    }
+    &__content-item {
+        width: 82%;
+        @include stylcenter(flex, center, space-between);
+    }
+    &__item-list {
+        width: 25%;
+        @include stylcenter(flex, start, space-between);
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__list-link {
+        @include stylefontz($font-family, 300, 16px,  #f6f6f6);
+        line-height: 1.5;
+    }
+    &__content-social {
+        width: 16%;
+        @include stylcenter(flex, start, space-between);
+    }
+    &__social-link {
+        width: 52px;
+        height: 52px;
+        @include stylcenter(flex, center, center);
+        border-radius: 100%;
+        border: 1px solid #f6f6f6;
+    }
+}
 @media (max-width: 1024px) {
     .title {
         font-size: 35px;
@@ -242,7 +382,7 @@ body {
         }
     }
 }
-@media (max-width: 915px) {
+@media (max-width: 960px) {
     .header {
         &__content {
             display: none;
@@ -251,5 +391,50 @@ body {
             display: block;
         }
     }
+    .main {
+        border-bottom: 0;
+        &__content {
+            flex-direction: column;
+        }
+        &__content-bg {
+            width: 100%;
+        }
+        &__content-info {
+            width: 100%;
+        }
+    }
+    .about {
+        &__info {
+            flex-direction: column;
+            gap: 40px;
+        }
+        &__info-bg {
+            width: 100%;
+        }
+        &__info-info {
+            width: 100%;
+        }
+    }
+    .services {
+        &__flex {
+            flex-direction: column;
+            gap: 40px;
+            
+        }
+        &__flex-bg {
+            width: 100%;
+        }
+        &__flex-info {
+            width: 100%;
+            padding-bottom: 115px;
+        }
+    }
     
+}
+@media (max-width: 768px) {
+    .category {
+        &__wrap-flex {
+            flex: 0 1 50%;
+        }
+    }
 }
