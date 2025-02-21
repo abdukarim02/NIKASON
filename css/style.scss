@@ -142,11 +142,12 @@ body {
     }
 }
 .main {
+    border-bottom: 1px solid #000;
 	&__content {
         @include stylcenter(flex, center, space-between);
 	}
 	&__content-bg {
-        width: 719px;
+        width: 50%;
         height: 774px;
         img {
             width: 100%;
@@ -175,21 +176,69 @@ body {
         border: 1px solid #715b4b;
 	}
 }
+.category {
+    margin: 160px 0 100px;
+    &__content-title {
+        margin-bottom: 85px;
+    }
+    &__content-body {
+        @include stylcenter(flex, center, space-between);
+        margin-bottom: 160px;
+    }
+    &__body-info {
+        padding: 14px 0;
+        border-bottom: 3px solid #715b4b;
+    }
+    &__info-text {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        @include stylefontz($font-family, 300, 18px,  #323232);
+        line-height: 1.5;
+    }
+    &__list-title {
+        margin-bottom: 100px;
+    }
+    &__list-wrap {
+        border: 1px solid #000;
+        @include stylcenter(flex, center, space-between);
+        flex-wrap: wrap;
+    }
+    &__wrap-flex {
+        flex: 0 1 25%;
+        height: 243px;
+        border: 0.5px solid #000;
+        @include stylcenter(flex, center, center);
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__flex-bg {
+        width: 100px;
+        height: 100px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__flex-name {
+        @include stylefontz($font-family, 300, 18px,  #323232);
+    }
+}
 @media (max-width: 1024px) {
     .title {
         font-size: 35px;
     }
     .main {
-        margin-top: 70px;
         &__content {
             gap: 40px;
         }
         &__content-bg {
-            width: 50%;
             height: 50%;
         }
         &__content-info {
             width: 50%;
+            height: 350px;
         }
     }
 }
