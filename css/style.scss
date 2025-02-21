@@ -506,6 +506,11 @@ body {
             width: 100%;
         }
     }
+    .video {
+        &__content-bg {
+            height: 50vh;
+        }
+    }
     
     .footer {
         padding: 40px 0 155px;

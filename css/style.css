@@ -608,6 +608,9 @@ body {
   .category__info-text {
     width: 100%;
   }
+  .video__content-bg {
+    height: 50vh;
+  }
   .footer {
     padding: 40px 0 155px;
     height: 100%;
