@@ -758,6 +758,74 @@ body {
   height: 18px;
 }
 
+.production {
+  margin: 160px 0;
+}
+.production__content-title {
+  margin-bottom: 100px;
+}
+.production__content-wrap {
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.production__wrap-flex {
+  flex: 0 1 33.334%;
+  height: 141px;
+  padding: 0px 40px 0px 42px;
+  position: relative;
+  border: 0.5px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.production__flex-info {
+  position: absolute;
+  bottom: 30px;
+}
+.production__flex-info p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #323232;
+}
+.production__flex-number {
+  position: absolute;
+  top: 7px;
+  right: 40px;
+}
+.production__flex-number span {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  color: #323232;
+}
+
+.clients {
+  overflow: hidden;
+}
+.clients__content {
+  height: 60vh;
+  position: relative;
+}
+.clients__swiper {
+  position: absolute;
+  max-width: 1295px;
+  margin-top: 100px;
+  margin-left: auto;
+}
+.clients__swiper .swiper-slide {
+  width: 236px !important;
+}
+.clients__swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media (max-width: 1024px) {
   .title {
     font-size: 35px;

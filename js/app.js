@@ -24,3 +24,10 @@ var swiper = new Swiper(".mySwiper", {
       swiper: swiper,
     },
 });
+var swiper = new Swiper(".mySwiperclients", {
+    slidesPerView: 'auto',
+    spaceBetween: 35,
+    keyboard: {
+      enabled: true,
+    },
+  });
