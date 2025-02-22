@@ -73,7 +73,6 @@ span {
   display: block;
 }
 
-/*--------------------*/
 body {
   display: flex;
   justify-content: space-between;
@@ -446,52 +445,6 @@ body {
      object-fit: contain;
 }
 
-.footer {
-  padding: 85px 0 245px;
-  background: #715b4b;
-}
-.footer__content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.footer__content-item {
-  width: 82%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.footer__item-list {
-  width: 25%;
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  flex-direction: column;
-  gap: 10px;
-}
-.footer__list-link {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  color: #f6f6f6;
-  line-height: 1.5;
-}
-.footer__content-social {
-  width: 16%;
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-}
-.footer__social-link {
-  width: 52px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-  border: 1px solid #f6f6f6;
-}
-
 .baner {
   position: relative;
 }
@@ -772,17 +725,21 @@ body {
 }
 .production__content-wrap {
   border: 1px solid #000;
+  border-left: none;
+  border-bottom: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 .production__wrap-flex {
-  flex: 0 1 33.334%;
+  flex: 0 1 33.333%;
   height: 141px;
   padding: 0px 40px 0px 42px;
   position: relative;
   border: 0.5px solid #000;
+  border-right: none;
+  border-top: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -845,6 +802,52 @@ body {
   width: 100%;
   margin-bottom: 120px;
 }
+.footer {
+  padding: 85px 0 245px;
+  background: #715b4b;
+}
+.footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__content-item {
+  width: 82%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__item-list {
+  width: 25%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer__list-link {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #f6f6f6;
+  line-height: 1.5;
+}
+.footer__content-social {
+  width: 16%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.footer__social-link {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  border: 1px solid #f6f6f6;
+}
+
 @media (max-width: 1024px) {
   .title {
     font-size: 35px;

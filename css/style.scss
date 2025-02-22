@@ -15,7 +15,6 @@ ul li{list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 span {display: block;}
-/*--------------------*/
 $font-family: "Open Sans", sans-serif;
 $second-family: "Tenor Sans", sans-serif;
 $third-family: "Montserrat", sans-serif;
@@ -339,38 +338,6 @@ body {
         }
     }
 }
-.footer {
-    padding: 85px 0 245px;
-    background: #715b4b;
-    &__content {
-        @include stylcenter(flex, center, space-between);
-    }
-    &__content-item {
-        width: 82%;
-        @include stylcenter(flex, center, space-between);
-    }
-    &__item-list {
-        width: 25%;
-        @include stylcenter(flex, start, space-between);
-        flex-direction: column;
-        gap: 10px;
-    }
-    &__list-link {
-        @include stylefontz($font-family, 300, 16px,  #f6f6f6);
-        line-height: 1.5;
-    }
-    &__content-social {
-        width: 16%;
-        @include stylcenter(flex, start, space-between);
-    }
-    &__social-link {
-        width: 52px;
-        height: 52px;
-        @include stylcenter(flex, center, center);
-        border-radius: 100%;
-        border: 1px solid #f6f6f6;
-    }
-}
 .baner {
     position: relative;
     &__bg {
@@ -614,15 +581,19 @@ body {
     }
     &__content-wrap {
         border: 1px solid #000;
+        border-left: none;
+        border-bottom: none;
         @include stylcenter(flex, center, space-between);
         flex-wrap: wrap;
     }
     &__wrap-flex {
-        flex: 0 1 33.334%;
+        flex: 0 1 33.333%;
         height: 141px;
         padding: 0px 40px 0px 42px;
         position: relative;
         border: 0.5px solid #000;
+        border-right: none;
+        border-top: none;
         @include stylcenter(flex, center, space-between);
     }
     &__flex-info {
@@ -677,6 +648,38 @@ body {
     // .contanct__contennt-btn
 
     &__contennt-btn {
+    }
+}
+.footer {
+    padding: 85px 0 245px;
+    background: #715b4b;
+    &__content {
+        @include stylcenter(flex, center, space-between);
+    }
+    &__content-item {
+        width: 82%;
+        @include stylcenter(flex, center, space-between);
+    }
+    &__item-list {
+        width: 25%;
+        @include stylcenter(flex, start, space-between);
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__list-link {
+        @include stylefontz($font-family, 300, 16px,  #f6f6f6);
+        line-height: 1.5;
+    }
+    &__content-social {
+        width: 16%;
+        @include stylcenter(flex, start, space-between);
+    }
+    &__social-link {
+        width: 52px;
+        height: 52px;
+        @include stylcenter(flex, center, center);
+        border-radius: 100%;
+        border: 1px solid #f6f6f6;
     }
 }
 @media (max-width: 1024px) {
