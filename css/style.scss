@@ -33,6 +33,9 @@ $third-family: "Montserrat", sans-serif;
 // @include stylefontz($second-family, 700, 70px, $colorgrey);
 // @include stylcenter(flex, center, space-between);
 body {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     position: relative;
     background: #f3efea;
 }
@@ -47,6 +50,7 @@ body {
 }
 .title {
     @include stylefontz($font-family, 400, 48px, #57463a);
+    line-height: 1.5;
 }
 .btn {
     padding: 18px 58px;
@@ -93,7 +97,7 @@ body {
         top: 0;
         position: absolute;
         overflow: hidden;
-        z-index: 0;
+        z-index: 1;
     }
     &__body-burger {
         margin-left: auto;
@@ -338,8 +342,7 @@ body {
     }
 }
 .footer {
-    padding-top: 85px;
-    height: 380px;
+    padding: 85px 0 245px;
     background: #715b4b;
     &__content {
         @include stylcenter(flex, center, space-between);
@@ -368,6 +371,171 @@ body {
         @include stylcenter(flex, center, center);
         border-radius: 100%;
         border: 1px solid #f6f6f6;
+    }
+}
+.baner {
+    position: relative;
+    &__bg {
+        width: 100%;
+        height: 80vh;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include stylcenter(flex, center, center);
+        flex-direction: column;
+    }
+    &__content-title {
+        color: #f6f6f6;
+        text-align: center;
+        margin-bottom: 115px;
+    }
+    &__content-btn {
+        background: #f6f6f6;
+        color: #4c6d77;
+    }
+}
+.works {
+    margin: 160px 0;
+    &__content {
+        @include stylcenter(flex, center, center);
+        flex-direction: column;
+    }
+    &__content-title {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+    &__content-wrap {
+        margin-bottom: 100px;
+        @include stylcenter(flex, center, space-between);
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    &__wrap-flex {
+        flex: 0 1 21%;
+        height: 341px;
+    }
+    &__flex-bg {
+        width: 100%;
+        height: 300px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__flex-name {
+        @include stylefontz($font-family, 400, 16px,   #323232);
+        text-align: center;
+        margin-top: 25px;
+    }
+    &__content-btn {
+        
+    }
+}
+.column {
+    &__content-wrap {
+        width: 30%;
+        margin: 45px auto 100px;
+    }
+    &__wrap-flex {
+        margin: 55px 0;
+        @include stylcenter(flex, center, start);
+        gap: 45px;
+    }
+    &__flex-number {
+        padding: 12px 23px;
+        border-radius: 100%;
+        background: #a1b29f;
+        span {
+            @include stylefontz($font-family, 700, 24px,  #f6f6f6);
+            line-height: 1.5;
+        }
+    }
+    &__flex-info {
+        
+    }
+    &__info-text {
+    }
+}
+.restoration {
+    margin: 160px 0;
+    &__content-title {
+        margin-bottom: 100px;
+    }
+    &__content-wrap {
+        @include stylcenter(flex, center, space-between);
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    &__wrap-flex {
+        flex: 0 1 21%;
+    }
+    &__flex-bg {
+        width: 100%;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__flex-name {
+        margin-top: 25px;
+        width: 100%;
+        p {
+            @include stylefontz($font-family, 700, 18px,  #323232);
+            text-align: center;
+        }
+    }
+}
+.restoration-baner {
+    &__content-title {
+        margin-bottom: 100px;
+    }
+    &__content-wrap {
+        @include stylcenter(flex, center, space-between);
+    }
+    &__wrap-flex {
+        width: 49%;
+    }
+    &__flex-bg {
+        width: 100%;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__flex-name {
+        width: 100%;
+        margin-top: 20px;
+        p {
+            text-align: center;
+            @include stylefontz($font-family, 700, 18px,  #323232);
+        }
+    }
+}
+.management {
+    margin: 160px 0;
+    &__content {
+        @include stylcenter(flex, center, space-between);
+    }
+    &__content-info {
+        width: 55%;
+    }
+    &__info-text {
+        margin: 100px 0 65px;
+    }
+    &__content-bg {
+        width: 45%;
+        height: 475px;
+        background: #c4c4c4;
     }
 }
 @media (max-width: 1024px) {
@@ -399,13 +567,21 @@ body {
             width: 25%;
         }
     }
+    .works {
+        &__content-wrap {
+            gap: 25px;
+        }
+        &__wrap-flex {
+            flex: 0 1 22%;
+        }
+    }
 }
 @media (max-width: 960px) {
     .title {
         font-size: 32px;
     }
     .btn {
-        padding: 18px 42px;
+        padding: 18px 23px;
     }
     .header {
         &__content {
@@ -458,6 +634,26 @@ body {
             padding: 35px;
         }
     }
+    .works {
+        &__content-wrap {
+            gap: 22px;
+        }
+        &__wrap-flex {
+            flex: 0 1 45%;
+            height: 197px;
+        }
+        &__flex-bg {
+            height: 161px;
+        }
+    }
+    .column {
+        &__content-wrap {
+            width: 100%;
+        }
+        &__wrap-flex {
+            justify-content: center;
+        }
+    }
 }
 @media (max-width: 768px) {
     .category {
@@ -491,6 +687,35 @@ body {
     }
     .guarantee__content-text  {
         font-size: 11px;
+    }
+    .restoration {
+        &__content-wrap {
+            gap: 22px;
+        }
+        &__wrap-flex {
+            flex: 0 1 44%;
+        }
+    }
+    .restoration-baner {
+        &__content-wrap {
+            flex-direction: column;
+            gap: 40px;
+        }
+        &__wrap-flex {
+            width: 100%;
+        }
+    }
+    .management {
+        &__content {
+            flex-direction: column;
+            gap: 45px;
+        }
+        &__content-info {
+            width: 100%;
+        }
+        &__content-bg {
+            width: 100%;
+        }
     }
 }
 @media (max-width: 626px) {
