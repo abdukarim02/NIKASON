@@ -393,6 +393,9 @@ body {
         @include stylcenter(flex, center, center);
         flex-direction: column;
     }
+    &__content-subtitle {
+        @include stylefontz($font-family, 300, 16px, #f6f6f6);
+    }
     &__content-title {
         color: #f6f6f6;
         text-align: center;
@@ -536,6 +539,72 @@ body {
         width: 45%;
         height: 475px;
         background: #c4c4c4;
+    }
+}
+.choose {
+    margin: 160px 0;
+    &__content-title {
+        margin-bottom: 100px;
+    }
+    &__content-wrap {
+        @include stylcenter(flex, center, space-between);
+        flex-wrap: wrap;
+        gap: 85px;
+    }
+    &__wrap-flex {
+        flex: 0 1 25%;
+    }
+    &__flex-name {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #715b4b;
+        h5 {
+            @include stylefontz($font-family, 700, 16px,  #323232);
+        }
+    }
+    &__flex-text {
+        padding-top: 20px;
+        p {
+            @include stylefontz($font-family, 400, 16px,  #323232);
+        }
+    }
+}
+.portfolio {
+    &__content {
+        position: relative;
+    }
+    &__content-title {
+        margin-bottom: 100px;
+    }
+    &__content-slider {
+        width: 818px;
+        margin: 0 auto;
+        .mySwiper2 {
+            margin-bottom: 20px;
+            width: 818px;
+            height: 694px;
+        }
+        .swiper-slide {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .swiper-button-next:after, .swiper-button-prev:after {
+            display: none;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            width: 30px;
+            height: 30px;
+            padding: 7px;
+            border-radius: 100%;
+            background: #f6f6f6;
+            bottom: 0%;
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
     }
 }
 @media (max-width: 1024px) {
